@@ -1,0 +1,4 @@
+{
+  "about": "Each release that changes no built file, mapped to the release whose built files it repeats byte for byte.",
+  "releases": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@apnex/graph-arrange",
+  "version": "0.1.0",
+  "description": "Arrange nodes, nested groups, and links into deterministic 2D placement points, slots, envelopes, and bundled link curves.",
+  "license": "MIT",
+  "author": "apnex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aobersnel/graph-arrange.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "VISION.md",
+    "CONTRACT.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node tools/clean-dist.mjs && tsc -p .",
+    "prepack": "npm run build",
+    "test": "npm run build && clean-runner run test/*/*.test.js",
+    "gate": "npm test && node tools/check-vocabulary.mjs && node tools/check-runtime.mjs && node tools/check-clock-and-chance.mjs && node tools/check-export-map.mjs && node tools/check-style.mjs",
+    "consumer": "clean-runner exec node tools/consumer-test.mjs"
+  },
+  "devDependencies": {
+    "@apnex/clean-runner": "https://github.com/apnex/clean-runner/releases/download/v0.2.0/apnex-clean-runner-0.2.0.tgz",
+    "@apnex/headless-chromium": "https://github.com/apnex/headless-chromium/releases/download/v0.2.0/apnex-headless-chromium-0.2.0.tgz",
+    "typescript": "5.9.3"
+  }
+}

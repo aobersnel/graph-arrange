@@ -1,0 +1,40 @@
+{
+  "about": "Consumer-domain nouns and brand names that graph-arrange's source must not hold (P4). Generic graph-theory nouns (node, link, group, slot, point, layout) remain valid.",
+  "lists": {
+    "disco": [
+      "vm",
+      "vnic",
+      "vcpu",
+      "wave",
+      "tier",
+      "nsx",
+      "vcenter",
+      "vsan",
+      "esxi",
+      "hypervisor",
+      "portgroup",
+      "vdisk",
+      "subnet",
+      "firewall",
+      "dql",
+      "peggy",
+      "vicky",
+      "debbie",
+      "disco"
+    ],
+    "draw": [
+      "zone",
+      "pipe",
+      "waypoint",
+      "device",
+      "diagram",
+      "anchor",
+      "glyph",
+      "spawner",
+      "transit",
+      "junction",
+      "drawv2"
+    ],
+    "input-tester": ["keyboard", "keycap"]
+  }
+}

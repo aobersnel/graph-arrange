@@ -1,0 +1,60 @@
+{
+  "package": "@apnex/graph-arrange",
+  "paths": {
+    ".": {
+      "exports": {
+        "HierarchyHullLayoutPlugin": {
+          "part": "graph-arrange",
+          "serves": ["layout-plugin-registry", "containment-hull-arrangement"]
+        },
+        "LayeredFlowLayoutPlugin": {
+          "part": "graph-arrange",
+          "serves": ["layout-plugin-registry", "layered-lane-arrangement"]
+        },
+        "OrbitFlatLayoutPlugin": {
+          "part": "graph-arrange",
+          "serves": ["layout-plugin-registry", "orbital-constellation-arrangement"]
+        },
+        "RadialClusterLayoutPlugin": {
+          "part": "graph-arrange",
+          "serves": ["layout-plugin-registry", "radial-cluster-arrangement"]
+        },
+        "buildCompactLabelMap": {
+          "part": "graph-arrange",
+          "serves": ["sibling-label-compaction"]
+        },
+        "bundleLinks": {
+          "part": "graph-arrange",
+          "serves": ["bundled-link-routing"]
+        },
+        "compactSingleLabel": {
+          "part": "graph-arrange",
+          "serves": ["sibling-label-compaction"]
+        },
+        "computeSceneBounds": {
+          "part": "graph-arrange",
+          "serves": ["scene-bounds-measurement"]
+        },
+        "createDefaultLayoutRegistry": {
+          "part": "graph-arrange",
+          "serves": [
+            "layout-plugin-registry",
+            "radial-cluster-arrangement",
+            "orbital-constellation-arrangement",
+            "containment-hull-arrangement",
+            "layered-lane-arrangement"
+          ]
+        },
+        "createLayoutRegistry": {
+          "part": "graph-arrange",
+          "serves": ["layout-plugin-registry"]
+        },
+        "resolveBoxCollisions": {
+          "part": "graph-arrange",
+          "serves": ["box-collision-separation"]
+        }
+      }
+    }
+  },
+  "deferred": {}
+}
